@@ -1,64 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salto del Div al Hacer Clic</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-color: #ae84e6;
-    }
-    .cuadrado {
-      width: 50px;
-      height: 50px;
-      background-color: aquamarine;
-      position: absolute;
-      top: 50%; /* Posición inicial del cuadrado */
-      left: 50%;
-      transform: translate(-50%, -50%); /* Centrado inicial */
-      transition: transform 0.3s ease-in-out; /* Transición para el efecto de salto */
-    }
-
-    .cuadrado2 {
-      width: 50px;
-      height: 50px;
-      background-color: rgb(127, 255, 127);
-      position: absolute;
-      top: 50%; /* Posición inicial del cuadrado */
-      left: 50%;
-      transform: translate(-40%, -70%); /* Centrado inicial */
-      transition: transform 0.3s ease-in-out; /* Transición para el efecto de salto */
-    }
-
-    .salto {
-      transform: translate(-50%, -150%) scale(1.2); /* Subir 100px y aumentar ligeramente el tamaño */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <div class="cuadrado" id="cuadrado"></div>
-
-  <script>
-    const cuadrado = document.getElementById('cuadrado'); // Obtener el div cuadrado
-
-    // Función para aplicar el salto al cuadrado
-    function saltarCuadrado() {
-      // Añadir la clase 'salto' al cuadrado
-      cuadrado.classList.add('salto');
-
-      // Remover la clase 'salto' después de la animación para que pueda repetirse
-      setTimeout(() => {
-        cuadrado.classList.remove('salto');
-      }, 300); // El tiempo de la animación es de 0.3 segundos
-    }
-
-    // Agregar el evento de clic en todo el documento
-    document.body.addEventListener('click', saltarCuadrado);
-
-
-  </script>
+    <h1><a href="cuadros.html">Ir al cuadro</a></h1>
+    <h1><a href="juego.html">Ir al juego</a></h1>
+    
 </body>
 </html>

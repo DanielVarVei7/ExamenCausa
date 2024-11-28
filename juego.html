@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El gato</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            background-image:
+        }
+
+        #gameArea {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-image: url(https://media.admagazine.com/photos/6321dc2fd75f2fd76bd149ba/master/w_1600%2Cc_limit/2_1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    
+
+        #figure  {
+            position: absolute;
+            bottom: 0;
+            width: 500px;
+            height: 500px;;
+            border-radius: 50px;
+            transition: transform 0.3s ease-out;
+            background-image: url(https://tr.rbxcdn.com/180DAY-5cc74192a2b64d0ef45eb5f71be34068/420/420/LayeredAccessory/Png/noFilter);
+            background-size: 450px;
+            background-position: center;
+            
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(0) scale(1);}
+            50% {
+                transform: translateY(-300px) scale(1.5);}
+            100% {
+                transform: translateY(0) scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <div id="gameArea">
+        <div id="figure"></div>
+    </div>
+
+    <script>
+        let figure = document.getElementById("figure");
+        let isJumping = false;
+        let scaleFactor = 1;
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === " " && !isJumping) { 
+                isJumping = true;
+                scaleFactor += 0.1; 
+                figure.style.animation = "jump 0.6s ease-out";
+                figure.style.transform = `scale(${scaleFactor})`; 
+
+                setTimeout(() => {
+                    isJumping = false;
+                    figure.style.animation = ""; 
+                    figure.style.transform = `scale(${1})`; 
+                }, 600); 
+            }
+        });
+    </script>
+    
+</body>
+</html>
+<
